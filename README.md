@@ -1,6 +1,8 @@
 # skybox_extended
 A minetest mod that adds a simple coded interchangeable skybox which adds Space to a regular minetest world, adding certain realism when going into higher altitudes.
 
+**Forum:** https://forum.minetest.net/viewtopic.php?f=9&t=13775
+
 # Instructions 
 1) Extract mod from "skybox_extended_master.zip" or "skybox_extended_master.tar.gz"
  
