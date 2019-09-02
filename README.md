@@ -8,7 +8,9 @@ A minetest mod that adds a simple coded interchangeable skybox which adds Space 
  
 3) Change file permissions to "skybox_extended" (make sure the files are accessible to the client)
  
-4) Add "skybox_extended" mod to "minetest/games/[game directory]/mods" directory, then run minetest. :)
+4) Add "skybox_extended" mod to "minetest/games/[game directory]/mods" directory
+ 
+5) Run minetest.exe :)
 
 # Licence: 
 
