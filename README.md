@@ -14,8 +14,8 @@ A minetest mod that adds a simple coded interchangeable skybox which adds Space 
  
 5) Run Minetest :)
 
-# Licence: 
+# Licences: 
 
 **Code:** WTFPL – Do What the Fuck You Want to Public License. (http://www.wtfpl.net/)
  
-**Textures**  GPL 2 or CC BY-SA 3.0 (Cuinn Herrick)
+**Textures:**  GPL 2 or CC BY-SA 3.0 (Cuinn Herrick)
