@@ -6,4 +6,5 @@ Add "skybox_extended" mod to "minetest/games/[game directory]/mods" directory, t
 
 # Licence: 
 
-WTFPL – Do What the Fuck You Want to Public License. (http://www.wtfpl.net/)
+**Code:** WTFPL – Do What the Fuck You Want to Public License. (http://www.wtfpl.net/)
+**Textures**  GPL 2 or CC BY-SA 3.0 (Cuinn Herrick)
