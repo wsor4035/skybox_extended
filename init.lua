@@ -15,6 +15,22 @@ local spaceskybox = {
     "sky_pos_x.png",
 }
 
+--default sky for minetest
+local default_sky = {
+    type = "regular",
+    sky_color = {
+        day_sky = "#8cbafa",
+        day_horizon = "#9bc1f0",
+        dawn_sky = "#b4bafa",
+        dawn_horizon = "#bac1f0",
+        night_sky = "#006aff",
+        night_horizon = "#4090ff",
+        indoors = "#646464",
+        fog_tint_type = "default"
+    },
+    clouds = true
+}
+
 local time = 0
 
 minetest.register_globalstep(function(dtime)
@@ -27,21 +43,31 @@ minetest.register_globalstep(function(dtime)
             local name = player:get_player_name()
             local pos = player:getpos()
 
-            --If the player has reached Space
+            --if in space, set space skybox and physics
             if minetest.get_player_by_name(name) and pos.y >= space then
                 player:set_physics_override(1, 0.6, 0.2) -- speed, jump, gravity
-                player:set_sky({}, "skybox", spaceskybox) -- Sets skybox
-            --If the player is on Earth
+
+                player:set_sky({
+                    base_color = "#000000",
+                    type = "skybox",
+                    textures = spaceskybox,
+                    clouds = false,
+                })
+                player:set_sun({visible = false, sunrise_visible = false})
+                player:set_moon({visible = false})
+            --If the player is on Earth reset to default skybox and physics
             elseif minetest.get_player_by_name(name) and pos.y < space then
-                player:set_physics_override(1, 1, 1) -- speed, jump, gravity [default]
-                -- Sets skybox, in this case it sets the skybox to it's default setting if
-                --and only if the player's Y value is less than the value of space.
-                player:set_sky({}, "regular", {})
+                player:set_physics_override(1, 1, 1)
+
+                player:set_sky(default_sky)
+                player:set_moon({visible = true})
+                player:set_sun({visible = true})
             end
         end
     end
 end)
 
+--[[
 minetest.register_on_leaveplayer(function(player)
     local name = player:get_player_name()
 
@@ -49,3 +75,4 @@ minetest.register_on_leaveplayer(function(player)
         player:set_sky({}, "regular", {})
     end
 end)
+--]]
