@@ -1,0 +1,2 @@
+se_space (value from where space starts) int 20000
+se_physics (enable physics in space) bool false

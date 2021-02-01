@@ -18,6 +18,11 @@ A minetest mod that adds a simple coded interchangeable skybox which adds Space 
  
 5) Run Minetest 5.3 or greater :)
 
+# minetest.conf settings
+
+se_space (default 20000) value from where space starts  
+se_physics (default false) enable physics in space  
+
 # Licences: 
 
 **Code:** MIT  
