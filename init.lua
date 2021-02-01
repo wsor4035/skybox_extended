@@ -34,7 +34,9 @@ minetest.register_globalstep(function(dtime)
             --If the player is on Earth
             elseif minetest.get_player_by_name(name) and pos.y < space then
                 player:set_physics_override(1, 1, 1) -- speed, jump, gravity [default]
-                player:set_sky({}, "regular", {}) -- Sets skybox, in this case it sets the skybox to it's default setting if and only if the player's Y value is less than the value of space.
+                -- Sets skybox, in this case it sets the skybox to it's default setting if
+                --and only if the player's Y value is less than the value of space.
+                player:set_sky({}, "regular", {})
             end
         end
     end
